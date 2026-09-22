@@ -70,7 +70,6 @@ body {
 }
 
 .logo-icon {
-  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +79,13 @@ body {
   border: 1px solid rgba(245, 158, 11, 0.3);
   border-radius: var(--radius-md);
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+  overflow: hidden;
+}
+
+.logo-icon img {
+  display: block;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .brand-text {

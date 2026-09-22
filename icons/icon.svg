@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2433"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Amber / Chai Warm Glow -->
+    <linearGradient id="teaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Glowing Screen Screen Gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+
+    <!-- Steam Gradient -->
+    <linearGradient id="steamGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon Base Squircle -->
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#bgGrad)" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- ================= LAPTOP (COMPUTER) ================= -->
+  <!-- Laptop Screen Lid -->
+  <rect x="18" y="32" width="62" height="44" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Laptop Screen Display -->
+  <rect x="22" y="36" width="54" height="36" rx="2" fill="url(#screenGrad)"/>
+
+  <!-- Code Lines on Display (Amber & Cyan Developer Theme) -->
+  <rect x="26" y="42" width="14" height="2.5" rx="1.2" fill="#f59e0b"/>
+  <rect x="43" y="42" width="22" height="2.5" rx="1.2" fill="#38bdf8"/>
+  
+  <rect x="30" y="48" width="26" height="2" rx="1" fill="#94a3b8"/>
+  <rect x="58" y="48" width="12" height="2" rx="1" fill="#34d399"/>
+  
+  <rect x="30" y="54" width="18" height="2" rx="1" fill="#a78bfa"/>
+  <rect x="51" y="54" width="20" height="2" rx="1" fill="#f43f5e"/>
+
+  <rect x="26" y="60" width="10" height="2" rx="1" fill="#f59e0b"/>
+  <circle cx="40" cy="61" r="1.5" fill="#38bdf8"/>
+
+  <!-- Laptop Base / Keyboard Deck -->
+  <path d="M12 76 L86 76 L82 82 L16 82 Z" fill="#30363d"/>
+  <!-- Trackpad Notch -->
+  <rect x="44" y="77" width="10" height="2" rx="1" fill="#161b22"/>
+
+  <!-- ================= CHAI CUP & SAUCER ================= -->
+  <!-- Saucer Plate -->
+  <ellipse cx="94" cy="85" rx="22" ry="5" fill="#21262d" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Cup Handle -->
+  <path d="M103 62 C114 62 114 74 103 76" fill="none" stroke="url(#teaGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Cup Body -->
+  <path d="M81 56 L83 75 C84 81 102 81 103 75 L105 56 Z" fill="url(#teaGrad)"/>
+  
+  <!-- Chai Liquid Surface Rim -->
+  <ellipse cx="93" cy="56" rx="12" ry="3.5" fill="#d97706" stroke="#fef3c7" stroke-width="1"/>
+
+  <!-- Swirl on Chai surface -->
+  <ellipse cx="93" cy="56" rx="8" ry="2" fill="#b45309"/>
+
+  <!-- Steaming Swirls Rising into the Air -->
+  <path d="M88 48 C85 43 91 38 88 32 C86 28 89 24 87 20" fill="none" stroke="url(#steamGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M96 49 C93 42 99 37 96 30 C94 25 97 22 95 18" fill="none" stroke="url(#steamGrad)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M103 48 C101 44 105 40 102 34" fill="none" stroke="url(#steamGrad)" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
