@@ -1,15 +1,27 @@
 {
   "manifest_version": 3,
   "name": "TeaAndCode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smart, eye-comfort dark mode & theme switcher for developer documentation.",
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup/popup.html",
     "default_title": "Documentation Theme Settings"
+  },
+  "commands": {
+    "toggle-theme": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "Toggle TeaAndCode theme for active tab"
+    }
   }
 }

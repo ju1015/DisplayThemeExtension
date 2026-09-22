@@ -66,7 +66,8 @@ TeaAndCode is built following the latest **Manifest V3** extension standard:
 
 ```text
 DisplayThemeExtension/
-├── manifest.json       # Extension metadata, permissions & action registration
+├── manifest.json       # Extension metadata, permissions & command registration
+├── background.js       # Background service worker handling Alt+Shift+D shortcuts
 ├── README.md           # Documentation & installation guide
 └── popup/
     ├── popup.html      # Glassmorphic developer UI layout
@@ -80,7 +81,10 @@ DisplayThemeExtension/
    - Queries `chrome.tabs.query` to identify the current tab and extract the domain.
    - Loads saved preferences for that domain from `chrome.storage.local`.
    - Uses `chrome.scripting.executeScript` to dynamically inject or update a custom `<style id="tea-and-code-theme-style">` element directly in the page's `<head>`.
-3. **The Double-Inversion Magic**:
+3. **`background.js` (Service Worker)**:
+   - Listens for `chrome.commands` when you press `Alt + Shift + D`.
+   - Wakes up on demand to toggle the active tab's theme and saves preferences, even when the popup window is closed.
+4. **The Double-Inversion Magic**:
    ```css
    /* Invert page to dark */
    html {
@@ -95,12 +99,12 @@ DisplayThemeExtension/
 
 ---
 
-## ⌨️ Shortcuts & Tips
-- You can assign a custom keyboard shortcut by visiting:
+## ⌨️ Shortcuts & Hotkeys
+- **`Alt` + `Shift` + `D`**: Instantly toggle the theme ON / OFF on your current tab without even opening the popup!
+- You can customize this shortcut anytime in your browser by visiting:
   ```text
   chrome://extensions/shortcuts
   ```
-  and binding a key combination (like `Alt + Shift + D`) to quickly open the theme menu.
 
 ---
 
